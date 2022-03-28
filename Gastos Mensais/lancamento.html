@@ -97,28 +97,13 @@
                     <select id="parcelamento" class="Parcelamento" required>
                     <option selected disabled value="Selecione">Selecione</option>
                      <script>
-                       document.getElementById("parcelamento").onfocus = function () {
-                        
-                        var comboCidades = document.getElementById("parcelamento");
-                        while (comboCidades.length) {
-                            comboCidades.remove(0);
-                            }
-                                            
-                        const parcelas = document.querySelector('#valor').value;
-                        
-                        const mparcelamento = ["A vista"];
-                        for (let indice=2; indice < 13; indice++)
-                        {
-                                let conteudo = indice < 10 ? `0${indice} x R$ ${(parcelas/indice).toFixed(2)}`:`${indice} x R$ ${(parcelas/indice).toFixed(2)}`;
-                                mparcelamento.push(conteudo);
-                        }
-                        const select4 = document.getElementById("parcelamento");
-                        for (let parcelamento of mparcelamento)
-                            select4.options[select4.options.length] = new Option(parcelamento);
-                                                  
-                           //alert('teste');
+                       
 
-                    }
+                        document.getElementById("parcelamento").onchange = function () {
+                            const valor= document.getElementById("parcelamento").value;
+                            get
+                            //alert(valor);
+                        }
                      </script>
                    
                     </select>
