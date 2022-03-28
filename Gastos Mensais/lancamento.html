@@ -105,31 +105,18 @@
                             }
                                             
                         const parcelas = document.querySelector('#valor').value;
-
-                        let x2 = Number(`${parcelas/2}`).toFixed(2);
-                        const x3=Number(`${parcelas/3}`).toFixed(2);
-                        const x4=Number(`${parcelas/4}`).toFixed(2);
-                        const x5=Number(`${parcelas/5}`).toFixed(2);
-                        const x6=Number(`${parcelas/6}`).toFixed(2);
-                        const x7=Number(`${parcelas/7}`).toFixed(2);
-                        const x8=Number(`${parcelas/8}`).toFixed(2);
-                        const x9=Number(`${parcelas/9}`).toFixed(2);
-                        const x10=Number(`${parcelas/10}`).toFixed(2);
-                        const x11=Number(`${parcelas/11}`).toFixed(2);
-                        const x12=Number(`${parcelas/12}`).toFixed(2);
-        
                         
-                        const mparcelamento = ["A vista",`02 x R$ ${x2}`,`03 x R$ ${x3}`,`04 x R$ ${x4}`,`05 x R$ ${x5}`,`06 x R$ ${x6}`,`07 x R$ ${x7}`,`08 x R$ ${x8}`,`09 x R$ ${x9}`,`10 x R$ ${x10}`,`11 x R$ ${x11}`,`12 x R$ ${x12}`];
+                        const mparcelamento = ["A vista"];
+                        for (let indice=2; indice < 13; indice++)
+                        {
+                                let conteudo = indice < 10 ? `0${indice} x R$ ${(parcelas/indice).toFixed(2)}`:`${indice} x R$ ${(parcelas/indice).toFixed(2)}`;
+                                mparcelamento.push(conteudo);
+                        }
                         const select4 = document.getElementById("parcelamento");
                         for (let parcelamento of mparcelamento)
                             select4.options[select4.options.length] = new Option(parcelamento);
-                       
-                        
-                            
+                                                  
                            //alert('teste');
-
-                        
-                        
 
                     }
                      </script>
