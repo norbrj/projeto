@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<select id="Dono" class="Dono" required>
+  <option selected disabled value="Selecione">Selecione</option>
+  
+</select>
+
+<script>
+const mcategoria = ["Arur","Agua","Mercado","Lazer","Carro","Feira","Fármacia","Agua","Padaria",""];
+
+const select = document.getElementById('Dono');
+
+for (let categoria of mcategoria)
+  select.options[select.options.length] = new Option(categoria);
+
+
+
+</script>
+
+</body>
+</html>

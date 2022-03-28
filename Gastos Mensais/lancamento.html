@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>
+        Gastos Mensais
+    </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href="lancamento.css" media='screen' href='main.css'>
+    <script src='main.js' ></script>
+   
+
+</head>
+
+<body>
+
+    <div>
+        <h1 id="titulo"> Gastos Mensais</h1>
+        <p id="subtitulo">Lançamentos de gastos diarios</p>
+        <br>
+    </div>
+    
+    <form>
+            
+            <div class="campo">
+                <label for="data"><strong>Data :</strong></label>
+                <input type="date" name="data" id="data" required>
+            </div>
+            <div class="campo">
+                <label for="email"><strong>Email :</strong></label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+
+            <fieldset class="caixa">
+            
+            <div class="campo">
+                <label for="Categoria"><strong>Categoria :</strong></label>
+                <select class="categoria" id="Categoria" required>
+                  <option selected disabled value="Selecione">Selecione</option> 
+                  <script>
+                    const mcategoria = ["Arthur","Agua","Mercado","Lazer","Carro","Feira","Fármacia","Agua","Padaria"];
+                    let select1 = document.getElementById("Categoria");
+                    for (let categoria of mcategoria)
+                         select1.options[select1.options.length] = new Option(categoria);
+                </script>    
+                </select>
+                
+            </div>
+
+            <div class="campoPagamento">
+                
+                <ui>Pagamentos</ui>
+                <li>fdfgd</li>
+                <li>fdfgd</li>
+
+            </div>
+        </fieldset>
+
+            <div class="campo">
+                <label for="Dono"><strong>Dono Compra : </strong></label>
+                <select id="Dono" required>
+                    <option selected disabled value="Selecione">Selecione</option>
+                    <script>
+                        const mdono = ["Licia","Marcos"];
+                        let select2 = document.getElementById("Dono");
+                        for (let Dono of mdono)
+                             select2.options[select2.options.length] = new Option(Dono);
+                    </script>   
+                
+                </select>
+            </div>
+
+            <div class="campo"> 
+                <label for="pagamento"><strong>Pagamento : </strong></label>
+                <select id="pagamento" required>
+                    <option selected disabled value="Selecione">Selecione</option>
+
+                    <script>
+                        const mpagamento = ["Original","Inter","C6","Nubank","Picpay"];
+                        let select3 = document.getElementById("pagamento");
+                        for (let pagamento of mpagamento)
+                             select3.options[select3.options.length] = new Option(pagamento);
+                    </script>  
+                    
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="valor"><strong>Valor :</strong></label>
+                <input type="text" name="valor" id="valor" placehold="Valor" required>
+            </div>
+
+        
+            <div class="campo">
+                    <label for="parcelamento"><strong>Parcelamento : </strong></label>
+                    <select id="parcelamento" class="Parcelamento" required>
+                    <option selected disabled value="Selecione">Selecione</option>
+                     <script>
+                       document.getElementById("parcelamento").onfocus = function () {
+                        
+                        var comboCidades = document.getElementById("parcelamento");
+                        while (comboCidades.length) {
+                            comboCidades.remove(0);
+                            }
+                                            
+                        const parcelas = document.querySelector('#valor').value;
+
+                        let x2 = Number(`${parcelas/2}`).toFixed(2);
+                        const x3=Number(`${parcelas/3}`).toFixed(2);
+                        const x4=Number(`${parcelas/4}`).toFixed(2);
+                        const x5=Number(`${parcelas/5}`).toFixed(2);
+                        const x6=Number(`${parcelas/6}`).toFixed(2);
+                        const x7=Number(`${parcelas/7}`).toFixed(2);
+                        const x8=Number(`${parcelas/8}`).toFixed(2);
+                        const x9=Number(`${parcelas/9}`).toFixed(2);
+                        const x10=Number(`${parcelas/10}`).toFixed(2);
+                        const x11=Number(`${parcelas/11}`).toFixed(2);
+                        const x12=Number(`${parcelas/12}`).toFixed(2);
+        
+                        
+                        const mparcelamento = ["A vista",`02 x R$ ${x2}`,`03 x R$ ${x3}`,`04 x R$ ${x4}`,`05 x R$ ${x5}`,`06 x R$ ${x6}`,`07 x R$ ${x7}`,`08 x R$ ${x8}`,`09 x R$ ${x9}`,`10 x R$ ${x10}`,`11 x R$ ${x11}`,`12 x R$ ${x12}`];
+                        const select4 = document.getElementById("parcelamento");
+                        for (let parcelamento of mparcelamento)
+                            select4.options[select4.options.length] = new Option(parcelamento);
+                       
+                        
+                            
+                           //alert('teste');
+
+                        
+                        
+
+                    }
+                     </script>
+                   
+                    </select>
+            </div>
+
+            
+        <div class="campo">
+            <label for="descricao"><strong>Descrição compra : </strong></label>
+            <textarea id="descricao" required placeholder="Descrição da compra"></textarea>
+        </div>
+        
+        <button class="botao" type="submit" onsubmit="">Concluído</button>
+
+    </form>
+   
+</body>
+  
+</html>
