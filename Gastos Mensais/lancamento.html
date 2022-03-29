@@ -8,21 +8,16 @@
     </title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href="lancamento.css" media='screen' href='main.css'>
-    <script src='main.js' ></script>
-   
-
+ 
 </head>
 
 <body>
-
     <div>
         <h1 id="titulo"> Gastos Mensais</h1>
         <p id="subtitulo">Lançamentos de gastos diarios</p>
         <br>
     </div>
-    
     <form>
-            
             <div class="campo">
                 <label for="data"><strong>Data :</strong></label>
                 <input type="date" name="data" id="data" required>
@@ -34,40 +29,22 @@
 
             <fieldset class="caixa">
             
+                <div class="campo">
+                    <label for="Categoria"><strong>Categoria :</strong></label>
+                    <select class="categoria" id="Categoria" required>
+                      <option selected disabled value="Selecione">Selecione</option> 
+                    </select>
+            </div>
+
             <div class="campo">
-                <label for="Categoria"><strong>Categoria :</strong></label>
-                <select class="categoria" id="Categoria" required>
-                  <option selected disabled value="Selecione">Selecione</option> 
-                  <script>
-                    const mcategoria = ["Arthur","Agua","Mercado","Lazer","Carro","Feira","Fármacia","Agua","Padaria"];
-                    let select1 = document.getElementById("Categoria");
-                    for (let categoria of mcategoria)
-                         select1.options[select1.options.length] = new Option(categoria);
-                </script>    
-                </select>
-                
+                <ul class="qtdParcelas" id="campo" Parcelas ul>
             </div>
 
-            <div class="campoPagamento">
-                
-                <ui>Pagamentos</ui>
-                <li>fdfgd</li>
-                <li>fdfgd</li>
-
-            </div>
         </fieldset>
-
             <div class="campo">
                 <label for="Dono"><strong>Dono Compra : </strong></label>
                 <select id="Dono" required>
                     <option selected disabled value="Selecione">Selecione</option>
-                    <script>
-                        const mdono = ["Licia","Marcos"];
-                        let select2 = document.getElementById("Dono");
-                        for (let Dono of mdono)
-                             select2.options[select2.options.length] = new Option(Dono);
-                    </script>   
-                
                 </select>
             </div>
 
@@ -75,14 +52,6 @@
                 <label for="pagamento"><strong>Pagamento : </strong></label>
                 <select id="pagamento" required>
                     <option selected disabled value="Selecione">Selecione</option>
-
-                    <script>
-                        const mpagamento = ["Original","Inter","C6","Nubank","Picpay"];
-                        let select3 = document.getElementById("pagamento");
-                        for (let pagamento of mpagamento)
-                             select3.options[select3.options.length] = new Option(pagamento);
-                    </script>  
-                    
                 </select>
             </div>
 
@@ -90,35 +59,27 @@
                 <label for="valor"><strong>Valor :</strong></label>
                 <input type="text" name="valor" id="valor" placehold="Valor" required>
             </div>
-
         
             <div class="campo">
                     <label for="parcelamento"><strong>Parcelamento : </strong></label>
                     <select id="parcelamento" class="Parcelamento" required>
                     <option selected disabled value="Selecione">Selecione</option>
-                     <script>
-                       
-
-                        document.getElementById("parcelamento").onchange = function () {
-                            const valor= document.getElementById("parcelamento").value;
-                            get
-                            //alert(valor);
-                        }
-                     </script>
-                   
+               
                     </select>
             </div>
-
             
         <div class="campo">
             <label for="descricao"><strong>Descrição compra : </strong></label>
             <textarea id="descricao" required placeholder="Descrição da compra"></textarea>
         </div>
-        
-        <button class="botao" type="submit" onsubmit="">Concluído</button>
+
+        <div>
+            <button class="botao" type="submit" onsubmit="">Concluído</button>
+        </div>
 
     </form>
    
+    <script src='main.js' ></script>
 </body>
   
 </html>

@@ -123,8 +123,11 @@ textarea {
 }
 
 .caixa {
-    display: flex;
+    display: inline-flex;
     
+}
+#caixa {
+    padding: 15%;
 }
 
 .campoPagamento {
