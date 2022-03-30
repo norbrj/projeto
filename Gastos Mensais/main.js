@@ -25,21 +25,6 @@ criacombo("Dono",mdono);
 criacombo("pagamento",mpagamento);
 
 
-//let select1 = document.getElementById("Categoria");
-//for (let categoria of mcategoria)
-  //   select1.options[select1.options.length] = new Option(categoria);
-
-//const mdono = ["Licia","Marcos"];
-//let select2 = document.getElementById("Dono");
-//for (let Dono of mdono)
-  //   select2.options[select2.options.length] = new Option(Dono);
-
-//const mpagamento = ["Original","Inter","C6","Nubank","Picpay"];
-//let select3 = document.getElementById("pagamento");
-//for (let pagamento of mpagamento)
-//    select3.options[select3.options.length] = new Option(pagamento);
-
-
 function preenchecombo()
 {
   limpacombo();
@@ -52,13 +37,52 @@ function preenchecombo()
           let conteudo = indice < 10 ? `0${indice} x R$ ${valor}`:`${indice} x R$ ${valor}`;
           mparcelamento.push(conteudo);
   }
-  const select4 = document.getElementById("parcelamento");
-  for (let parcelamento of mparcelamento)
-      select4.options[select4.options.length] = new Option(parcelamento);
+  criacombo("parcelamento",mparcelamento);
+  
 }
 
+
+
+function criali () {
+
+  const li = document.createElement('li');
+  return li;
+}
+
+function limpali()
+{
+
+
+
+}
+function lancaparcelas () 
+{                        
+
+    //alert("teste")
+    
+    const resultado = document.querySelector(".qtdParcelas");
+    
+    
+    try {
+      console.log("tentei");
+
+      resultado.removeChild(li);
+      console.log("tentei");
+
+    } 
+    catch (error) 
+    
+    {
+
+      const li = criali();  
+      li.innerText = comboparcelamento.value; //"teste";
+      li.setAttribute('class','datas');
+      resultado.appendChild(li);      
+
+    }
+
+}
+
+
 valor.addEventListener('focusout', () => preenchecombo());
-
-
-//comboparcelamento.addEventListener('mousedown', () => preenchecombo());
-
+comboparcelamento.addEventListener('change', () => lancaparcelas());
