@@ -1,3 +1,4 @@
+
 const db = require('./db')
 
 const Pagamento = db.sequelize.define('pagamentos', {
