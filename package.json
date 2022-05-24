@@ -1,0 +1,26 @@
+{
+  "name": "node_js_celke",
+  "version": "1.0.0",
+  "description": "cursonode",
+  "main": "app.js",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "body-parser": "^1.20.0",
+    "bootstrap": "^5.1.3",
+    "express": "^4.18.1",
+    "express-handlebars": "^3.0.2",
+    "handlebars": "^4.7.7",
+    "moment": "^2.24.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^1.7.0",
+    "nodemon": "^2.0.16",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^5.22.5"
+  },
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "author": "Cesar Szpak",
+  "license": "ISC"
+}

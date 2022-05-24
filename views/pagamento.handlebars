@@ -1,0 +1,13 @@
+<h1>Listar pagamento</h1>
+
+  
+{{#each pagamentos}}
+  <div class="uk-card uk-card-default uk-card-body uk-margin uk-align-center uk-width-1-2@m" >
+    ID: {{this.id}}<br>
+    Nome: {{this.nome}}<br>
+    Valor: {{valor}}<br>
+    Cadastrado: {{#formatDate createdAt}}{{/formatDate}}<br>
+    <a href="/del-pagamento/{{id}}"><button>Apagar</button></a>
+    <hr>
+  </div>
+{{/each}}
